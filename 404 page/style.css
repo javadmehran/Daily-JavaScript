@@ -29,3 +29,27 @@ body{
     font-size: 300px;
     color: #fff;
 }
+#container .content h4{
+font-size: 50px;
+color:#fff;
+margin-top:-50px;
+position: relative;
+}
+#container .content p{
+    font-size: 20px;
+    color: #fff;
+    margin: 25px 0;
+
+}
+#container .content a{
+    /* display: inline-block; */
+    text-decoration: none;
+    background-color: #8500ff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
