@@ -21,7 +21,8 @@ search.addEventListener('click', () => {
          const data = await res.json();
          divEl.innerHTML += `<div>
         <img src="${data.image}">
-        <h3>${data.description.slice(0, 50)}...</h3>
+        <h2>${data.title}</h2>
+        <span>${data.description.slice(0, 50)}...</span>
         </div>`
 
       } else {
