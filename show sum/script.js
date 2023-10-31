@@ -15,7 +15,7 @@ let arr = [];
 search.addEventListener('click', () => {
    const b = proId.value;
    arr = b.split("-");
-   arr.map((async e => {
+   arr.map((async (e) => {
       if (e < 21) {
          const res = await fetch(`https://fakestoreapi.com/products/${e}`);
          const data = await res.json();
