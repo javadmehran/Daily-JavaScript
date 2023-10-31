@@ -11,23 +11,23 @@
 const divEl = document.querySelector('.container')
 const proId = document.querySelector('#product')
 const search = document.querySelector('.btn')
-let arr=[];
+let arr = [];
 search.addEventListener('click', () => {
    const b = proId.value;
    arr = b.split("-");
    arr.map((async e => {
-if(e<21){
-      const res = await fetch(`https://fakestoreapi.com/products/${e}`);
-      const data = await res.json();
-      divEl.innerHTML += `<div>
+      if (e < 21) {
+         const res = await fetch(`https://fakestoreapi.com/products/${e}`);
+         const data = await res.json();
+         divEl.innerHTML += `<div>
         <img src="${data.image}">
-        <h3>${data.title}</h3>
+        <h3>${data.description.slice(0, 50)}...</h3>
         </div>`
-   
-   }else{
-alert(`id: ${e} :not found`)
-   }
-}))
+
+      } else {
+         alert(`id: ${e} :not found`)
+      }
+   }))
 
 })
 
