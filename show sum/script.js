@@ -16,7 +16,7 @@ search.addEventListener('click', () => {
    const b = proId.value;
    arr = b.split("-");
    arr.map((async (e) => {
-      if (e < 21) {
+      if (e < 21 && e) {
          const res = await fetch(`https://fakestoreapi.com/products/${e}`);
          const data = await res.json();
          divEl.innerHTML += `<div>
@@ -24,7 +24,7 @@ search.addEventListener('click', () => {
         <h2>${data.title}</h2>
         <span>${data.description.slice(0, 50)}...</span>
         </div>`
-
+         proId.value = ''
       } else {
          alert(`id: ${e} :not found`)
       }
