@@ -8,5 +8,6 @@ let obgL={
     lname:'mehran',
     age:29
 }
-localStorage.setItem('obg',JSON.stringify(obgL))
+localStorage.setItem('obg',JSON.stringify(obgL));
 console.log(JSON.parse(localStorage.getItem('obg')));
+sessionStorage.setItem('name','javad')
