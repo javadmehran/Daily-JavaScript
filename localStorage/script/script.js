@@ -37,3 +37,4 @@ btnS.addEventListener('click',()=>{
     .then(data=>localStorage.setItem('token',data.token))
     .catch(err=>alert('wrong'))
 })
+document.cookie="javad;expires=Fri,3,Nov,2023 12:00:00 UTC"
