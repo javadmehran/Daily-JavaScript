@@ -11,30 +11,40 @@
 // localStorage.setItem('obg',JSON.stringify(obgL));
 // console.log(JSON.parse(localStorage.getItem('obg')));
 // sessionStorage.setItem('name','javad')
-const userInp=document.querySelector('#user');
-const passInp=document.querySelector('#pass');
-const btnS=document.querySelector('#btnSubmit');
+// const userInp=document.querySelector('#user');
+// const passInp=document.querySelector('#pass');
+// const btnS=document.querySelector('#btnSubmit');
 
-// fetch('https://fakestoreapi.com/users')
-//             .then(res=>res.json())
-//             .then(json=>console.log(json))
+// // fetch('https://fakestoreapi.com/users')
+// //             .then(res=>res.json())
+// //             .then(json=>console.log(json))
 
 
 
-btnS.addEventListener('click',()=>{
-    localStorage.clear()
-    fetch('https://fakestoreapi.com/auth/login',{
-        method:'POST',
-        body:JSON.stringify({
-            username:userInp.value,
-            password:passInp.value
-        }),
-        headers:{
-            'content-type':'application/json'
-        }
-    })
-    .then(res=>res.json())
-    .then(data=>localStorage.setItem('token',data.token))
-    .catch(err=>alert('wrong'))
-})
-document.cookie="javad;expires=Fri,3,Nov,2023 12:00:00 UTC"
+// btnS.addEventListener('click',()=>{
+//     localStorage.clear()
+//     fetch('https://fakestoreapi.com/auth/login',{
+//         method:'POST',
+//         body:JSON.stringify({
+//             username:userInp.value,
+//             password:passInp.value
+//         }),
+//         headers:{
+//             'content-type':'application/json'
+//         }
+//     })
+//     .then(res=>res.json())
+//     .then(data=>localStorage.setItem('token',data.token))
+//     .catch(err=>alert('wrong'))
+// })
+// document.cookie="javad;expires=Fri,3,Nov,2023 12:00:00 UTC"
+localStorage.clear()
+let information={
+    name:'javad',
+    family:'mehran',
+    age:29
+}
+localStorage.setItem('inf',JSON.stringify(information))
+console.log(JSON.parse(localStorage.getItem('inf')))
+sessionStorage.clear()
+sessionStorage.setItem('name','java')
